@@ -443,6 +443,23 @@
     .fade-in { opacity: 0; transform: translateY(28px); transition: opacity 0.7s ease, transform 0.7s ease; }
     .fade-in.visible { opacity: 1; transform: translateY(0); }
   </style>
+  <!-- Meta Pixel Code -->
+  <script>
+  !function(f,b,e,v,n,t,s)
+  {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+  n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+  if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+  n.queue=[];t=b.createElement(e);t.async=!0;
+  t.src=v;s=b.getElementsByTagName(e)[0];
+  s.parentNode.insertBefore(t,s)}(window, document,'script',
+  'https://connect.facebook.net/en_US/fbevents.js');
+  fbq('init', '2011015899764157');
+  fbq('track', 'PageView');
+  </script>
+  <noscript><img height="1" width="1" style="display:none"
+  src="https://www.facebook.com/tr?id=2011015899764157&ev=PageView&noscript=1"
+  /></noscript>
+  <!-- End Meta Pixel Code -->
 </head>
 <body>
 
@@ -454,7 +471,7 @@
         <span class="logo-name">M&amp;N Saunas</span>
         <span class="logo-sub">Malta's Finnish Sauna Specialist</span>
       </div>
-      <a href="https://wa.me/35677731019?text=Hello%2C%20I%27m%20interested%20in%20a%20Finnish%20sauna%20for%20my%20property%20in%20Malta." target="_blank" rel="noopener" class="btn-wa-header">
+      <a href="https://wa.me/35677731019?text=Hello%2C%20I%27m%20interested%20in%20a%20Finnish%20sauna%20for%20my%20property%20in%20Malta." onclick="fbq('track', 'Lead');" target="_blank" rel="noopener" class="btn-wa-header">
         💬 <span class="full">Order on WhatsApp</span><span style="display:none" class="short">Order</span>
       </a>
     </div>
@@ -471,8 +488,8 @@
     <h1>The Most Powerful Health Investment<br><em>You Can Make.</em><br><span style="font-size:0.7em;color:#d6d3d1">And It Fits In Your Home.</span></h1>
     <p class="hero-sub">Finland has the lowest cardiovascular death rate in Europe. They also have more saunas per capita than any country on Earth. That is not a coincidence.</p>
     <div class="hero-cta-row">
-      <a href="https://wa.me/35677731019?text=Hello%2C%20I%27m%20interested%20in%20a%20Finnish%20sauna%20for%20my%20property%20in%20Malta." target="_blank" rel="noopener" class="btn-primary">💬 Order on WhatsApp</a>
-      <a href="https://www.mnsaunasmt.com/product-category/finnish-saunas" target="_blank" rel="noopener" class="btn-secondary">↗ View Full Site</a>
+      <a href="https://wa.me/35677731019?text=Hello%2C%20I%27m%20interested%20in%20a%20Finnish%20sauna%20for%20my%20property%20in%20Malta." onclick="fbq('track', 'Lead');" target="_blank" rel="noopener" class="btn-primary">💬 Order on WhatsApp</a>
+      <a href="https://www.mnsaunasmt.com/product-category/finnish-saunas" onclick="fbq('track', 'InitiateCheckout');" target="_blank" rel="noopener" class="btn-secondary">↗ View Full Site</a>
     </div>
     <div class="hero-badges">
       <span>🔥 Finnish Harvia Stove</span>
@@ -936,8 +953,8 @@
             </ul>
             <div class="product-price">From €4,970 + VAT</div>
             <div class="product-btns">
-              <a href="https://wa.me/35677731019?text=Hello%2C%20I%27m%20interested%20in%20the%20MNA2%20Finnish%20Sauna." target="_blank" rel="noopener" class="btn-wa-product">💬 Order on WhatsApp</a>
-              <a href="https://www.mnsaunasmt.com" target="_blank" rel="noopener" class="btn-site-product">↗ View on Site</a>
+              <a href="https://wa.me/35677731019?text=Hello%2C%20I%27m%20interested%20in%20the%20MNA2%20Finnish%20Sauna." onclick="fbq('track', 'Lead');" target="_blank" rel="noopener" class="btn-wa-product">💬 Order on WhatsApp</a>
+              <a href="https://www.mnsaunasmt.com" onclick="fbq('track', 'InitiateCheckout');" target="_blank" rel="noopener" class="btn-site-product">↗ View on Site</a>
             </div>
           </div>
         </div>
@@ -959,8 +976,8 @@
             </ul>
             <div class="product-price">Contact for pricing</div>
             <div class="product-btns">
-              <a href="https://wa.me/35677731019?text=Hello%2C%20I%27m%20interested%20in%20the%20MNA4%20Finnish%20Sauna." target="_blank" rel="noopener" class="btn-wa-product">💬 Order on WhatsApp</a>
-              <a href="https://www.mnsaunasmt.com" target="_blank" rel="noopener" class="btn-site-product">↗ View on Site</a>
+              <a href="https://wa.me/35677731019?text=Hello%2C%20I%27m%20interested%20in%20the%20MNA4%20Finnish%20Sauna." onclick="fbq('track', 'Lead');" target="_blank" rel="noopener" class="btn-wa-product">💬 Order on WhatsApp</a>
+              <a href="https://www.mnsaunasmt.com" onclick="fbq('track', 'InitiateCheckout');" target="_blank" rel="noopener" class="btn-site-product">↗ View on Site</a>
             </div>
           </div>
         </div>
@@ -982,15 +999,15 @@
             </ul>
             <div class="product-price">Contact for pricing</div>
             <div class="product-btns">
-              <a href="https://wa.me/35677731019?text=Hello%2C%20I%27m%20interested%20in%20a%20custom%20Finnish%20sauna." target="_blank" rel="noopener" class="btn-wa-product">💬 Order on WhatsApp</a>
-              <a href="https://www.mnsaunasmt.com" target="_blank" rel="noopener" class="btn-site-product">↗ View on Site</a>
+              <a href="https://wa.me/35677731019?text=Hello%2C%20I%27m%20interested%20in%20a%20custom%20Finnish%20sauna." onclick="fbq('track', 'Lead');" target="_blank" rel="noopener" class="btn-wa-product">💬 Order on WhatsApp</a>
+              <a href="https://www.mnsaunasmt.com" onclick="fbq('track', 'InitiateCheckout');" target="_blank" rel="noopener" class="btn-site-product">↗ View on Site</a>
             </div>
           </div>
         </div>
       </div>
       <div class="product-footer-note fade-in">
         <p>Not sure which model is right for your space? Send us your floor plan or a photo of the area on WhatsApp. We will advise honestly — including if a sauna would not work in your space.</p>
-        <a href="https://wa.me/35677731019?text=Hello%2C%20I%27d%20like%20advice%20on%20which%20sauna%20fits%20my%20space." target="_blank" rel="noopener" class="btn-wa-inline">💬 Send us your floor plan on WhatsApp →</a>
+        <a href="https://wa.me/35677731019?text=Hello%2C%20I%27d%20like%20advice%20on%20which%20sauna%20fits%20my%20space." onclick="fbq('track', 'Lead');" target="_blank" rel="noopener" class="btn-wa-inline">💬 Send us your floor plan on WhatsApp →</a>
       </div>
     </div>
   </section>
@@ -1003,8 +1020,8 @@
       <p class="final-sub">Every owner uses it. Not one has regretted it. The MNA2 is in stock — available for delivery this week. Custom models: 90 business days from your order.</p>
       <p class="final-note">No pressure. No sales call. Just a WhatsApp conversation where we answer your questions honestly.</p>
       <div class="final-cta-row">
-        <a href="https://wa.me/35677731019?text=Hello%2C%20I%27m%20interested%20in%20a%20Finnish%20sauna%20for%20my%20property%20in%20Malta." target="_blank" rel="noopener" class="btn-primary-lg">💬 Order on WhatsApp</a>
-        <a href="https://www.mnsaunasmt.com/product-category/finnish-saunas" target="_blank" rel="noopener" class="btn-secondary-lg">↗ View Full Site</a>
+        <a href="https://wa.me/35677731019?text=Hello%2C%20I%27m%20interested%20in%20a%20Finnish%20sauna%20for%20my%20property%20in%20Malta." onclick="fbq('track', 'Lead');" target="_blank" rel="noopener" class="btn-primary-lg">💬 Order on WhatsApp</a>
+        <a href="https://www.mnsaunasmt.com/product-category/finnish-saunas" onclick="fbq('track', 'InitiateCheckout');" target="_blank" rel="noopener" class="btn-secondary-lg">↗ View Full Site</a>
       </div>
       <div class="final-trust">
         <span>🔥 Finnish Harvia Stove</span>
@@ -1021,8 +1038,8 @@
     <div class="footer-inner">
       <div class="footer-logo">🔥 M&amp;N Saunas Malta · Malta's only specialist Finnish sauna company</div>
       <div class="footer-links">
-        <a href="https://wa.me/35677731019" target="_blank" rel="noopener">💬 WhatsApp</a>
-        <a href="https://www.mnsaunasmt.com" target="_blank" rel="noopener">↗ mnsaunasmt.com</a>
+        <a href="https://wa.me/35677731019" onclick="fbq('track', 'Lead');" target="_blank" rel="noopener">💬 WhatsApp</a>
+        <a href="https://www.mnsaunasmt.com" onclick="fbq('track', 'InitiateCheckout');" target="_blank" rel="noopener">↗ mnsaunasmt.com</a>
       </div>
       <span>© 2026 M&amp;N Saunas Malta</span>
     </div>
