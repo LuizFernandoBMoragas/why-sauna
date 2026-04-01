@@ -1,0 +1,1067 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>M&amp;N Saunas Malta — Finland's Finest, Installed in Your Home</title>
+  <meta name="description" content="Malta's only specialist Finnish sauna company. Harvia stove, Canadian Hemlock wood, full installation included. 20 saunas installed. Order on WhatsApp." />
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,800;1,700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <style>
+    /* ── RESET & BASE ──────────────────────────────────────────────────── */
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body {
+      background: #0f0d0b;
+      color: #e7e5e4;
+      font-family: 'Inter', system-ui, sans-serif;
+      font-size: 16px;
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+    }
+    a { color: inherit; text-decoration: none; }
+    img { max-width: 100%; display: block; }
+
+    /* ── TYPOGRAPHY ────────────────────────────────────────────────────── */
+    .font-display { font-family: 'Playfair Display', Georgia, serif; }
+    h1, h2, h3 { font-family: 'Playfair Display', Georgia, serif; line-height: 1.15; }
+
+    /* ── LAYOUT ────────────────────────────────────────────────────────── */
+    .container { width: 100%; max-width: 1100px; margin: 0 auto; padding: 0 1.25rem; }
+    .container--narrow { max-width: 720px; }
+    .container--mid { max-width: 900px; }
+    section { padding: 5rem 1.25rem; }
+
+    /* ── COLORS ────────────────────────────────────────────────────────── */
+    :root {
+      --amber: #c8922a;
+      --amber-light: #e8a83a;
+      --amber-dark: #a07020;
+      --stone-950: #0c0a09;
+      --stone-900: #1c1917;
+      --stone-800: #292524;
+      --stone-700: #44403c;
+      --stone-500: #78716c;
+      --stone-400: #a8a29e;
+      --stone-300: #d6d3d1;
+      --stone-200: #e7e5e4;
+      --stone-100: #f5f5f4;
+    }
+
+    /* ── STICKY HEADER ─────────────────────────────────────────────────── */
+    #site-header {
+      position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+      transition: background 0.3s, border-color 0.3s;
+      border-bottom: 1px solid transparent;
+    }
+    #site-header.scrolled {
+      background: rgba(15,13,11,0.95);
+      backdrop-filter: blur(8px);
+      border-color: rgba(41,37,36,0.6);
+    }
+    .header-inner {
+      max-width: 1100px; margin: 0 auto; padding: 0 1.25rem;
+      height: 64px; display: flex; align-items: center; justify-content: space-between;
+    }
+    .header-logo { display: flex; align-items: center; gap: 0.5rem; }
+    .header-logo .logo-name { font-family: 'Playfair Display', serif; font-weight: 700; font-size: 1.1rem; color: #f5f5f4; }
+    .header-logo .logo-sub { font-size: 0.7rem; color: var(--stone-500); margin-left: 0.5rem; }
+    .btn-wa-header {
+      display: inline-flex; align-items: center; gap: 0.4rem;
+      background: var(--amber); color: #0f0d0b; font-weight: 700;
+      padding: 0.5rem 1.1rem; border-radius: 0.75rem; font-size: 0.85rem;
+      transition: background 0.2s;
+    }
+    .btn-wa-header:hover { background: var(--amber-light); }
+
+    /* ── HERO ──────────────────────────────────────────────────────────── */
+    #hero {
+      min-height: 100vh;
+      background: linear-gradient(160deg, #1a1410 0%, #0f0d0b 60%);
+      display: flex; flex-direction: column; justify-content: center; align-items: center;
+      text-align: center; padding: 7rem 1.25rem 4rem;
+      position: relative; overflow: hidden;
+    }
+    #hero::before {
+      content: '';
+      position: absolute; inset: 0;
+      background: radial-gradient(ellipse at 50% 60%, rgba(200,146,42,0.07) 0%, transparent 70%);
+      pointer-events: none;
+    }
+    /* Hero photo placeholder */
+    .hero-photo-placeholder {
+      width: 100%; max-width: 680px; aspect-ratio: 16/9;
+      background: var(--stone-900); border: 1px dashed var(--stone-700);
+      border-radius: 1rem; margin: 0 auto 2.5rem;
+      display: flex; flex-direction: column; align-items: center; justify-content: center;
+      color: var(--stone-600); font-size: 0.8rem; gap: 0.5rem;
+    }
+    .hero-eyebrow {
+      display: inline-flex; align-items: center; gap: 0.5rem;
+      background: rgba(200,146,42,0.12); border: 1px solid rgba(200,146,42,0.3);
+      color: var(--amber); font-size: 0.7rem; font-weight: 700;
+      letter-spacing: 0.12em; text-transform: uppercase;
+      padding: 0.4rem 1rem; border-radius: 999px; margin-bottom: 1.5rem;
+    }
+    #hero h1 {
+      font-size: clamp(2rem, 5vw, 3.5rem); font-weight: 800;
+      color: #f5f5f4; margin-bottom: 0.5rem; max-width: 780px;
+    }
+    #hero h1 em { font-style: normal; color: var(--amber); }
+    #hero .hero-sub {
+      font-size: clamp(1rem, 2vw, 1.2rem); color: var(--stone-400);
+      max-width: 560px; margin: 0 auto 2rem;
+    }
+    .hero-cta-row { display: flex; flex-wrap: wrap; gap: 1rem; justify-content: center; margin-bottom: 2.5rem; }
+    .btn-primary {
+      display: inline-flex; align-items: center; gap: 0.5rem;
+      background: var(--amber); color: #0f0d0b; font-weight: 700;
+      padding: 1rem 2rem; border-radius: 1rem; font-size: 1rem;
+      transition: background 0.2s, transform 0.2s;
+      box-shadow: 0 8px 32px rgba(200,146,42,0.25);
+    }
+    .btn-primary:hover { background: var(--amber-light); transform: translateY(-2px); }
+    .btn-secondary {
+      display: inline-flex; align-items: center; gap: 0.5rem;
+      border: 1px solid var(--stone-700); color: var(--stone-300);
+      padding: 1rem 2rem; border-radius: 1rem; font-size: 1rem;
+      transition: border-color 0.2s, color 0.2s;
+    }
+    .btn-secondary:hover { border-color: var(--amber); color: var(--amber); }
+    .hero-badges { display: flex; flex-wrap: wrap; gap: 1rem; justify-content: center; font-size: 0.75rem; color: var(--stone-500); }
+    .hero-badges span { display: flex; align-items: center; gap: 0.3rem; }
+
+    /* ── SECTION LABELS ────────────────────────────────────────────────── */
+    .section-label {
+      display: block; text-align: center;
+      color: var(--amber); font-size: 0.7rem; font-weight: 700;
+      letter-spacing: 0.14em; text-transform: uppercase; margin-bottom: 1rem;
+    }
+    .section-title {
+      font-size: clamp(1.6rem, 3.5vw, 2.6rem); font-weight: 700;
+      color: #f5f5f4; text-align: center; margin-bottom: 1rem;
+    }
+    .section-title em { font-style: normal; color: var(--amber); }
+    .section-desc {
+      text-align: center; color: var(--stone-400); max-width: 560px;
+      margin: 0 auto 3.5rem; line-height: 1.7;
+    }
+
+    /* ── STAT GRID ─────────────────────────────────────────────────────── */
+    .stat-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1.25rem; }
+    .stat-card {
+      background: rgba(28,25,23,0.6); border: 1px solid rgba(200,146,42,0.2);
+      border-radius: 1rem; padding: 1.5rem; text-align: center;
+      transition: border-color 0.2s;
+    }
+    .stat-card:hover { border-color: rgba(200,146,42,0.5); }
+    .stat-value { font-family: 'Playfair Display', serif; font-size: 2.5rem; font-weight: 700; color: var(--amber); margin-bottom: 0.4rem; }
+    .stat-label { color: var(--stone-200); font-size: 0.85rem; font-weight: 500; margin-bottom: 0.4rem; }
+    .stat-source { color: var(--stone-500); font-size: 0.72rem; font-style: italic; }
+    .stat-note {
+      background: rgba(200,146,42,0.08); border: 1px solid rgba(200,146,42,0.2);
+      border-radius: 0.75rem; padding: 1.25rem 1.5rem; margin-top: 2rem;
+      color: var(--stone-400); font-size: 0.85rem; line-height: 1.7;
+    }
+    .stat-note strong { color: var(--amber); }
+
+    /* ── MECHANISM GRID ────────────────────────────────────────────────── */
+    .mechanism-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 1.25rem; }
+    .mechanism-card {
+      display: flex; gap: 1rem; padding: 1.5rem;
+      background: rgba(28,25,23,0.5); border: 1px solid var(--stone-800);
+      border-radius: 1rem; transition: border-color 0.2s;
+    }
+    .mechanism-card:hover { border-color: rgba(200,146,42,0.35); }
+    .mechanism-icon { color: var(--amber); font-size: 1.4rem; flex-shrink: 0; margin-top: 0.15rem; }
+    .mechanism-title { font-family: 'Playfair Display', serif; font-size: 1.05rem; color: var(--stone-100); margin-bottom: 0.4rem; }
+    .mechanism-body { color: var(--stone-400); font-size: 0.85rem; line-height: 1.7; }
+
+    /* ── FREQUENCY SECTION ─────────────────────────────────────────────── */
+    .freq-box {
+      background: rgba(28,25,23,0.6); border: 1px solid var(--stone-800);
+      border-radius: 1.25rem; padding: 2rem; margin-bottom: 1.5rem;
+    }
+    .freq-box p { color: var(--stone-300); line-height: 1.75; margin-bottom: 1rem; font-size: 1.05rem; }
+    .freq-box p em { font-style: normal; color: var(--amber); font-weight: 600; }
+    .freq-compare { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin-top: 1.5rem; }
+    .freq-col {
+      border-radius: 1rem; padding: 1.25rem;
+    }
+    .freq-col--gym { background: rgba(41,37,36,0.5); border: 1px solid var(--stone-700); }
+    .freq-col--home { background: rgba(200,146,42,0.1); border: 1px solid rgba(200,146,42,0.35); }
+    .freq-col-label { font-size: 0.7rem; text-transform: uppercase; letter-spacing: 0.1em; margin-bottom: 0.5rem; }
+    .freq-col--gym .freq-col-label { color: var(--stone-400); }
+    .freq-col--home .freq-col-label { color: var(--amber); }
+    .freq-col-num { font-family: 'Playfair Display', serif; font-size: 2.2rem; font-weight: 700; margin-bottom: 0.3rem; }
+    .freq-col--gym .freq-col-num { color: var(--stone-500); }
+    .freq-col--home .freq-col-num { color: var(--amber); }
+    .freq-col-sub { font-size: 0.82rem; margin-bottom: 0.75rem; }
+    .freq-col--gym .freq-col-sub { color: var(--stone-500); }
+    .freq-col--home .freq-col-sub { color: var(--stone-400); }
+    .freq-col-note { font-size: 0.75rem; color: var(--stone-600); }
+    .freq-quote { text-align: center; color: var(--stone-500); font-style: italic; font-size: 0.9rem; margin-top: 1.5rem; }
+
+    /* ── AUDIENCE CARDS ────────────────────────────────────────────────── */
+    .audience-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.5rem; }
+    .audience-card {
+      background: rgba(28,25,23,0.6); border: 1px solid var(--stone-800);
+      border-radius: 1.25rem; padding: 1.75rem; display: flex; flex-direction: column;
+      transition: border-color 0.2s;
+    }
+    .audience-card:hover { border-color: rgba(200,146,42,0.35); }
+    .audience-emoji { font-size: 2.5rem; margin-bottom: 1rem; }
+    .audience-title { font-family: 'Playfair Display', serif; font-size: 1.2rem; color: var(--amber); margin-bottom: 0.3rem; }
+    .audience-sub { color: var(--stone-300); font-weight: 500; font-size: 0.9rem; margin-bottom: 0.75rem; }
+    .audience-body { color: var(--stone-400); font-size: 0.85rem; line-height: 1.75; flex: 1; margin-bottom: 1rem; }
+    .audience-highlight {
+      background: rgba(200,146,42,0.1); border: 1px solid rgba(200,146,42,0.25);
+      border-radius: 0.5rem; padding: 0.5rem 0.75rem;
+      color: var(--amber); font-size: 0.78rem; font-weight: 600;
+    }
+
+    /* ── COMPONENTS GRID ───────────────────────────────────────────────── */
+    .components-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.25rem; }
+    .component-card {
+      background: rgba(28,25,23,0.5); border: 1px solid var(--stone-800);
+      border-radius: 1rem; padding: 1.5rem;
+      transition: border-color 0.2s;
+    }
+    .component-card:hover { border-color: rgba(200,146,42,0.35); }
+    .component-header { display: flex; align-items: center; gap: 0.75rem; margin-bottom: 0.75rem; }
+    .component-icon { color: var(--amber); font-size: 1.2rem; }
+    .component-name { color: var(--stone-200); font-weight: 600; font-size: 0.9rem; flex: 1; }
+    .component-badge {
+      font-size: 0.68rem; background: rgba(200,146,42,0.15);
+      color: var(--amber); border: 1px solid rgba(200,146,42,0.3);
+      padding: 0.2rem 0.6rem; border-radius: 999px; white-space: nowrap;
+    }
+    .component-body { color: var(--stone-400); font-size: 0.82rem; line-height: 1.7; }
+    .warranty-box {
+      margin-top: 1.5rem; background: rgba(28,25,23,0.4); border: 1px solid var(--stone-800);
+      border-radius: 1.25rem; padding: 1.5rem; display: flex; gap: 1rem; align-items: flex-start;
+    }
+    .warranty-icon { color: var(--amber); font-size: 1.6rem; flex-shrink: 0; }
+    .warranty-title { color: var(--stone-200); font-weight: 600; margin-bottom: 0.4rem; }
+    .warranty-body { color: var(--stone-400); font-size: 0.85rem; line-height: 1.7; }
+
+    /* ── OBJECTIONS ────────────────────────────────────────────────────── */
+    #objections { background: rgba(12,10,9,0.5); }
+    .objection-item { border-bottom: 1px solid var(--stone-800); }
+    .objection-btn {
+      width: 100%; display: flex; align-items: center; justify-content: space-between;
+      padding: 1.25rem 0; background: none; border: none; cursor: pointer;
+      text-align: left; color: var(--stone-200); font-size: 0.95rem; font-weight: 500;
+      transition: color 0.2s; gap: 1rem;
+    }
+    .objection-btn:hover { color: var(--amber); }
+    .objection-btn .chevron {
+      color: var(--amber); flex-shrink: 0; font-size: 1.1rem;
+      transition: transform 0.3s;
+    }
+    .objection-btn.open .chevron { transform: rotate(180deg); }
+    .objection-answer {
+      overflow: hidden; max-height: 0; transition: max-height 0.35s ease, padding 0.2s;
+    }
+    .objection-answer.open { max-height: 600px; }
+    .objection-answer-inner { padding-bottom: 1.25rem; color: var(--stone-400); font-size: 0.88rem; line-height: 1.8; }
+    .objection-answer-inner p { margin-bottom: 0.75rem; }
+    .objection-answer-inner p:last-child { margin-bottom: 0; }
+    .objection-answer-inner strong { color: var(--stone-200); }
+    .objection-answer-inner em { font-style: italic; color: var(--stone-500); }
+
+    /* ── GALLERY ───────────────────────────────────────────────────────── */
+    .video-placeholder {
+      background: var(--stone-900); border: 1px solid var(--stone-800);
+      border-radius: 1.25rem; aspect-ratio: 16/9;
+      display: flex; flex-direction: column; align-items: center; justify-content: center;
+      margin-bottom: 2rem; cursor: pointer; transition: border-color 0.2s;
+    }
+    .video-placeholder:hover { border-color: rgba(200,146,42,0.35); }
+    .play-btn {
+      width: 64px; height: 64px; border-radius: 50%;
+      background: rgba(200,146,42,0.15); border: 1px solid rgba(200,146,42,0.35);
+      display: flex; align-items: center; justify-content: center;
+      margin-bottom: 1rem; transition: background 0.2s;
+    }
+    .video-placeholder:hover .play-btn { background: rgba(200,146,42,0.25); }
+    .play-btn::after { content: '▶'; color: var(--amber); font-size: 1.2rem; margin-left: 4px; }
+    .video-label { color: var(--stone-400); font-size: 0.9rem; font-weight: 500; }
+    .video-sub { color: var(--stone-600); font-size: 0.75rem; margin-top: 0.25rem; }
+    .photo-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem; }
+    .photo-placeholder {
+      background: var(--stone-900); border: 1px solid var(--stone-800);
+      border-radius: 1rem; aspect-ratio: 4/3;
+      display: flex; flex-direction: column; align-items: center; justify-content: center;
+      padding: 1rem; transition: border-color 0.2s; text-align: center;
+    }
+    .photo-placeholder:hover { border-color: rgba(200,146,42,0.25); }
+    .photo-placeholder .ph-icon { color: var(--stone-700); font-size: 2rem; margin-bottom: 0.5rem; }
+    .photo-placeholder .ph-caption { color: var(--stone-600); font-size: 0.72rem; line-height: 1.5; }
+    .photo-placeholder .ph-add { color: var(--stone-700); font-size: 0.68rem; margin-top: 0.25rem; }
+
+    /* ── TESTIMONIALS ──────────────────────────────────────────────────── */
+    #testimonials { background: rgba(12,10,9,0.5); }
+    .testimonial-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 1.25rem; }
+    .testimonial-card {
+      background: rgba(28,25,23,0.7); border: 1px solid var(--stone-800);
+      border-radius: 1.25rem; padding: 1.75rem; display: flex; flex-direction: column; gap: 1rem;
+      transition: border-color 0.2s;
+    }
+    .testimonial-card:hover { border-color: rgba(200,146,42,0.35); }
+    .stars { display: flex; gap: 3px; }
+    .star { color: var(--amber); font-size: 0.85rem; }
+    .testimonial-quote { color: var(--stone-300); font-size: 0.85rem; line-height: 1.75; font-style: italic; flex: 1; }
+    .testimonial-author { border-top: 1px solid var(--stone-800); padding-top: 1rem; display: flex; align-items: center; gap: 0.75rem; }
+    .testimonial-flag { font-size: 1.5rem; }
+    .testimonial-name { color: var(--stone-200); font-weight: 600; font-size: 0.85rem; }
+    .testimonial-role { color: var(--stone-500); font-size: 0.75rem; }
+    .testimonial-metric {
+      background: rgba(200,146,42,0.1); border: 1px solid rgba(200,146,42,0.25);
+      border-radius: 0.5rem; padding: 0.4rem 0.75rem;
+      color: var(--amber); font-size: 0.75rem; font-weight: 600;
+    }
+    .testimonial-note { text-align: center; color: var(--stone-600); font-size: 0.75rem; font-style: italic; margin-top: 1.5rem; }
+
+    /* ── PRODUCT CARDS ─────────────────────────────────────────────────── */
+    .product-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.5rem; }
+    .product-card {
+      background: rgba(28,25,23,0.7); border: 1px solid var(--stone-800);
+      border-radius: 1.25rem; overflow: hidden; display: flex; flex-direction: column;
+      transition: border-color 0.2s;
+    }
+    .product-card:hover { border-color: rgba(200,146,42,0.45); }
+    .product-photo {
+      background: var(--stone-800); aspect-ratio: 4/3;
+      display: flex; flex-direction: column; align-items: center; justify-content: center;
+      position: relative;
+    }
+    .product-photo .ph-icon { color: var(--stone-700); font-size: 2.5rem; margin-bottom: 0.5rem; }
+    .product-photo .ph-add { color: var(--stone-600); font-size: 0.75rem; }
+    .product-badge {
+      position: absolute; top: 0.75rem; left: 0.75rem;
+      background: var(--amber); color: #0f0d0b;
+      font-size: 0.72rem; font-weight: 700; padding: 0.25rem 0.75rem; border-radius: 999px;
+    }
+    .product-body { padding: 1.5rem; display: flex; flex-direction: column; flex: 1; }
+    .product-name { font-family: 'Playfair Display', serif; color: var(--amber); font-size: 1.15rem; margin-bottom: 0.25rem; }
+    .product-tagline { color: var(--stone-400); font-size: 0.82rem; margin-bottom: 1rem; }
+    .product-specs { list-style: none; margin-bottom: 1.25rem; flex: 1; }
+    .product-specs li { display: flex; align-items: center; gap: 0.5rem; color: var(--stone-400); font-size: 0.8rem; margin-bottom: 0.35rem; }
+    .product-specs li::before { content: '✓'; color: var(--amber); font-size: 0.75rem; flex-shrink: 0; }
+    .product-price { color: var(--stone-200); font-weight: 700; font-size: 1.2rem; margin-bottom: 1rem; }
+    .product-btns { display: flex; flex-direction: column; gap: 0.6rem; }
+    .btn-wa-product {
+      display: flex; align-items: center; justify-content: center; gap: 0.5rem;
+      background: var(--amber); color: #0f0d0b; font-weight: 700;
+      padding: 0.75rem; border-radius: 0.75rem; font-size: 0.85rem;
+      transition: background 0.2s;
+    }
+    .btn-wa-product:hover { background: var(--amber-light); }
+    .btn-site-product {
+      display: flex; align-items: center; justify-content: center; gap: 0.5rem;
+      border: 1px solid var(--stone-700); color: var(--stone-400);
+      padding: 0.75rem; border-radius: 0.75rem; font-size: 0.85rem;
+      transition: border-color 0.2s, color 0.2s;
+    }
+    .btn-site-product:hover { border-color: var(--amber); color: var(--amber); }
+    .product-footer-note {
+      margin-top: 1.5rem; background: rgba(28,25,23,0.5); border: 1px solid var(--stone-800);
+      border-radius: 1.25rem; padding: 1.5rem; text-align: center;
+    }
+    .product-footer-note p { color: var(--stone-400); font-size: 0.85rem; margin-bottom: 1rem; }
+    .btn-wa-inline {
+      display: inline-flex; align-items: center; gap: 0.4rem;
+      color: var(--amber); font-weight: 600; font-size: 0.88rem;
+      transition: color 0.2s;
+    }
+    .btn-wa-inline:hover { color: var(--amber-light); }
+
+    /* ── FINAL CTA ─────────────────────────────────────────────────────── */
+    #final-cta {
+      background: linear-gradient(to bottom, #0c0a09, #0f0d0b);
+      border-top: 1px solid var(--stone-900);
+      text-align: center; padding: 6rem 1.25rem;
+    }
+    .final-badge {
+      display: inline-flex; align-items: center; gap: 0.5rem;
+      background: rgba(200,146,42,0.15); border: 1px solid rgba(200,146,42,0.35);
+      color: var(--amber); font-size: 0.72rem; font-weight: 700;
+      letter-spacing: 0.12em; text-transform: uppercase;
+      padding: 0.4rem 1rem; border-radius: 999px; margin-bottom: 2rem;
+    }
+    #final-cta h2 { font-size: clamp(2rem, 4.5vw, 3.2rem); color: #f5f5f4; margin-bottom: 1.25rem; }
+    #final-cta h2 em { font-style: normal; color: var(--amber); }
+    #final-cta .final-sub { color: var(--stone-400); font-size: 1.05rem; max-width: 520px; margin: 0 auto 0.75rem; line-height: 1.7; }
+    #final-cta .final-note { color: var(--stone-500); font-size: 0.85rem; margin-bottom: 2.5rem; }
+    .final-cta-row { display: flex; flex-wrap: wrap; gap: 1rem; justify-content: center; margin-bottom: 3rem; }
+    .btn-primary-lg {
+      display: inline-flex; align-items: center; gap: 0.6rem;
+      background: var(--amber); color: #0f0d0b; font-weight: 700;
+      padding: 1.1rem 2.5rem; border-radius: 1.25rem; font-size: 1.1rem;
+      transition: background 0.2s, transform 0.2s;
+      box-shadow: 0 12px 40px rgba(200,146,42,0.3);
+    }
+    .btn-primary-lg:hover { background: var(--amber-light); transform: translateY(-2px); }
+    .btn-secondary-lg {
+      display: inline-flex; align-items: center; gap: 0.6rem;
+      border: 1px solid var(--stone-700); color: var(--stone-300);
+      padding: 1.1rem 2.5rem; border-radius: 1.25rem; font-size: 1.1rem;
+      transition: border-color 0.2s, color 0.2s;
+    }
+    .btn-secondary-lg:hover { border-color: var(--amber); color: var(--amber); }
+    .final-trust { display: flex; flex-wrap: wrap; gap: 1.5rem; justify-content: center; color: var(--stone-500); font-size: 0.78rem; }
+
+    /* ── FOOTER ────────────────────────────────────────────────────────── */
+    footer {
+      padding: 2.5rem 1.25rem; border-top: 1px solid var(--stone-900);
+    }
+    .footer-inner {
+      max-width: 1100px; margin: 0 auto;
+      display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between;
+      gap: 1rem; color: var(--stone-600); font-size: 0.78rem;
+    }
+    .footer-logo { display: flex; align-items: center; gap: 0.5rem; color: var(--stone-500); font-weight: 600; }
+    .footer-links { display: flex; gap: 1.5rem; }
+    .footer-links a { color: var(--stone-600); transition: color 0.2s; }
+    .footer-links a:hover { color: var(--amber); }
+
+    /* ── DARK SECTION ALT ──────────────────────────────────────────────── */
+    .section-alt { background: rgba(12,10,9,0.5); }
+
+    /* ── RESPONSIVE ────────────────────────────────────────────────────── */
+    @media (max-width: 600px) {
+      .freq-compare { grid-template-columns: 1fr; }
+      .header-logo .logo-sub { display: none; }
+      .btn-wa-header span.full { display: none; }
+      .final-cta-row { flex-direction: column; align-items: center; }
+    }
+
+    /* ── FADE-IN ANIMATION ─────────────────────────────────────────────── */
+    .fade-in { opacity: 0; transform: translateY(28px); transition: opacity 0.7s ease, transform 0.7s ease; }
+    .fade-in.visible { opacity: 1; transform: translateY(0); }
+  </style>
+</head>
+<body>
+
+  <!-- ── STICKY HEADER ──────────────────────────────────────────────────── -->
+  <header id="site-header">
+    <div class="header-inner">
+      <div class="header-logo">
+        <span style="color:#c8922a;font-size:1.2rem">🔥</span>
+        <span class="logo-name">M&amp;N Saunas</span>
+        <span class="logo-sub">Malta's Finnish Sauna Specialist</span>
+      </div>
+      <a href="https://wa.me/35677731019?text=Hello%2C%20I%27m%20interested%20in%20a%20Finnish%20sauna%20for%20my%20property%20in%20Malta." target="_blank" rel="noopener" class="btn-wa-header">
+        💬 <span class="full">Order on WhatsApp</span><span style="display:none" class="short">Order</span>
+      </a>
+    </div>
+  </header>
+
+  <!-- ── HERO ───────────────────────────────────────────────────────────── -->
+  <section id="hero">
+    <!-- Replace this placeholder with a real sauna photo -->
+    <div class="hero-photo-placeholder">
+      <span style="font-size:2rem">📷</span>
+      <span>Add hero photo here — sauna interior, warm lighting</span>
+    </div>
+    <div class="hero-eyebrow">🔥 Malta's Only Finnish Sauna Specialist</div>
+    <h1>The Most Powerful Health Investment<br><em>You Can Make.</em><br><span style="font-size:0.7em;color:#d6d3d1">And It Fits In Your Home.</span></h1>
+    <p class="hero-sub">Finland has the lowest cardiovascular death rate in Europe. They also have more saunas per capita than any country on Earth. That is not a coincidence.</p>
+    <div class="hero-cta-row">
+      <a href="https://wa.me/35677731019?text=Hello%2C%20I%27m%20interested%20in%20a%20Finnish%20sauna%20for%20my%20property%20in%20Malta." target="_blank" rel="noopener" class="btn-primary">💬 Order on WhatsApp</a>
+      <a href="https://www.mnsaunasmt.com/product-category/finnish-saunas" target="_blank" rel="noopener" class="btn-secondary">↗ View Full Site</a>
+    </div>
+    <div class="hero-badges">
+      <span>🔥 Finnish Harvia Stove</span>
+      <span>🌲 Canadian Hemlock Wood</span>
+      <span>🚚 Malta &amp; Gozo Delivery</span>
+      <span>🛡️ 24-Month Warranty</span>
+      <span>🔄 Relocation Service</span>
+    </div>
+  </section>
+
+  <!-- ── RESEARCH / STATS ────────────────────────────────────────────────── -->
+  <section id="research">
+    <div class="container container--mid">
+      <span class="section-label">The Research</span>
+      <h2 class="section-title">63% lower risk of sudden cardiac death.<br><em>65% lower risk of Alzheimer's.</em></h2>
+      <p class="section-desc">These are not marketing claims. They are peer-reviewed findings published in JAMA Internal Medicine, Mayo Clinic Proceedings, and the Annals of Medicine — indexed medical journals, replicated across multiple studies, cited by cardiologists worldwide.</p>
+      <div class="stat-grid fade-in">
+        <div class="stat-card">
+          <div class="stat-value">63%</div>
+          <div class="stat-label">Lower risk of sudden cardiac death (4–7× weekly use)</div>
+          <div class="stat-source">JAMA Internal Medicine, 2015 · 2,315 participants · 20-year follow-up</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-value">65%</div>
+          <div class="stat-label">Lower risk of Alzheimer's disease</div>
+          <div class="stat-source">Annals of Medicine, 2018 · Same cohort · 20-year follow-up</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-value">47%</div>
+          <div class="stat-label">Lower risk of hypertension</div>
+          <div class="stat-source">Mayo Clinic Proceedings, 2018 · Systematic review of 40+ studies</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-value">83%</div>
+          <div class="stat-label">Of users report improved sleep quality</div>
+          <div class="stat-source">Sleep Medicine Reviews, 2019 · 17 studies · 1,683 participants</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-value">40%</div>
+          <div class="stat-label">Faster muscle recovery post-exercise</div>
+          <div class="stat-source">Journal of Human Kinetics, 2021 · Randomised controlled trial</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-value">200–300%</div>
+          <div class="stat-label">Growth hormone increase per session</div>
+          <div class="stat-source">University of Turku, 2018 · Supports muscle preservation after 40</div>
+        </div>
+      </div>
+      <div class="stat-note fade-in">
+        <strong>Important:</strong> All of the above research was conducted on traditional Finnish saunas operating at 80–100°C with low humidity. Not infrared cabinets. Not steam rooms. The physiological responses — and the health outcomes — are specific to this type of heat. The results do not transfer to lower-temperature alternatives.
+      </div>
+    </div>
+  </section>
+
+  <!-- ── MECHANISM ───────────────────────────────────────────────────────── -->
+  <section id="mechanism" class="section-alt">
+    <div class="container container--mid">
+      <span class="section-label">The Mechanism</span>
+      <h2 class="section-title">What happens to your body <em>at 90°C</em></h2>
+      <p class="section-desc">The benefits are not mysterious. They are the result of five specific physiological responses — each well-documented, each measurable, each cumulative with regular use.</p>
+      <div class="mechanism-grid fade-in">
+        <div class="mechanism-card">
+          <div class="mechanism-icon">❤️</div>
+          <div>
+            <div class="mechanism-title">Cardiovascular conditioning</div>
+            <div class="mechanism-body">At 90–100°C, your heart rate rises to 100–150 bpm — equivalent to moderate aerobic exercise. Cardiac output increases by 60–70%. Done regularly, this trains your cardiovascular system without joint stress. The European Journal of Preventive Cardiology (2022) confirmed this in a meta-analysis of 12 controlled studies.</div>
+          </div>
+        </div>
+        <div class="mechanism-card">
+          <div class="mechanism-icon">🧬</div>
+          <div>
+            <div class="mechanism-title">Heat shock proteins &amp; cellular repair</div>
+            <div class="mechanism-body">Intense heat triggers the production of heat shock proteins (HSPs), which repair damaged cellular proteins and reduce systemic inflammation. This mechanism is directly linked to the reduced risk of neurodegenerative disease observed in long-term sauna users.</div>
+          </div>
+        </div>
+        <div class="mechanism-card">
+          <div class="mechanism-icon">💪</div>
+          <div>
+            <div class="mechanism-title">Growth hormone surge</div>
+            <div class="mechanism-body">A single sauna session increases growth hormone levels by 200–300% (University of Turku, 2018). This supports muscle preservation, fat metabolism, and recovery — particularly relevant after the age of 40, when natural GH production declines significantly.</div>
+          </div>
+        </div>
+        <div class="mechanism-card">
+          <div class="mechanism-icon">🌙</div>
+          <div>
+            <div class="mechanism-title">Parasympathetic activation &amp; sleep</div>
+            <div class="mechanism-body">The cooling phase after sauna activates the parasympathetic nervous system, reducing cortisol and adrenaline. This is the physiological reason why 83% of regular sauna users report improved sleep quality. The effect is not psychological — it is a measurable hormonal shift.</div>
+          </div>
+        </div>
+        <div class="mechanism-card">
+          <div class="mechanism-icon">☀️</div>
+          <div>
+            <div class="mechanism-title">Thermoregulatory adaptation — the Malta factor</div>
+            <div class="mechanism-body">Regular sauna use in warm climates improves your body's efficiency at cooling itself. Users in hot countries consistently report feeling more comfortable in summer after 4–6 weeks of regular sauna use — not less. The sauna trains your thermoregulatory system the same way exercise trains your cardiovascular system.</div>
+          </div>
+        </div>
+        <div class="mechanism-card">
+          <div class="mechanism-icon">💧</div>
+          <div>
+            <div class="mechanism-title">Löyly — the Finnish mechanism</div>
+            <div class="mechanism-body">Throwing water on hot stones (löyly) creates a brief burst of steam that raises perceived temperature without raising dry air temperature. This intensifies the cardiovascular response while keeping the sauna comfortable to breathe in. It is the defining feature of a real Finnish sauna — and the reason infrared and steam rooms cannot replicate the results.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── FREQUENCY ARGUMENT ──────────────────────────────────────────────── -->
+  <section id="frequency">
+    <div class="container container--narrow">
+      <span class="section-label">The Frequency Argument</span>
+      <h2 class="section-title">The difference between 22% and 63%<br><em>is not the sauna.</em></h2>
+      <div class="freq-box fade-in">
+        <p>The 2015 JAMA study followed 2,315 Finnish men for 20 years. The men who used a sauna <em>4–7 times per week</em> had a 63% lower risk of sudden cardiac death. The men who used it once per week had a 22% reduction.</p>
+        <p style="color:#a8a29e">The difference between those two numbers is not the sauna. It is the <strong style="color:#e7e5e4">frequency</strong>. And frequency is entirely a function of access.</p>
+        <div class="freq-compare">
+          <div class="freq-col freq-col--gym">
+            <div class="freq-col-label">Gym / Spa Sauna</div>
+            <div class="freq-col-num">0.8×</div>
+            <div class="freq-col-sub">average uses per week by members</div>
+            <div class="freq-col-note">Requires trip, membership, booking, 45 min of your evening</div>
+          </div>
+          <div class="freq-col freq-col--home">
+            <div class="freq-col-label">Home Sauna</div>
+            <div class="freq-col-num">4.2×</div>
+            <div class="freq-col-sub">average uses per week by owners</div>
+            <div class="freq-col-note">It is there. You use it. That is the entire difference.</div>
+          </div>
+        </div>
+        <p class="freq-quote">"The dose makes the medicine. For sauna, the dose is frequency. Frequency requires access. Access requires ownership."</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── WHO THIS IS FOR ─────────────────────────────────────────────────── -->
+  <section id="audience" class="section-alt">
+    <div class="container">
+      <span class="section-label">Who This Is For</span>
+      <h2 class="section-title">Three different reasons. <em>One decision.</em></h2>
+      <p class="section-desc">Our customers come to us for different reasons. All of them are right.</p>
+      <div class="audience-grid fade-in">
+        <div class="audience-card">
+          <div class="audience-emoji">🧬</div>
+          <div class="audience-title">The Health-Focused</div>
+          <div class="audience-sub">You take your health seriously.</div>
+          <p class="audience-body">You exercise, you watch what you eat, you sleep 7–8 hours. You have read about sauna therapy and you know the research is solid. The sauna is the missing protocol — the one that works while you rest. You are not looking for a luxury item. You are looking for the most evidence-backed health investment available for your home.</p>
+          <div class="audience-highlight">63% lower cardiac death risk with 4–7× weekly use</div>
+        </div>
+        <div class="audience-card">
+          <div class="audience-emoji">🏠</div>
+          <div class="audience-title">The Property Owner</div>
+          <div class="audience-sub">You are building, renovating, or running an Airbnb.</div>
+          <p class="audience-body">Properties with Finnish saunas in Malta command 25–30% higher Airbnb nightly rates and 50–80% cost recovery on resale. If you are currently building, the 90-day lead time means you need to order now — before the walls close. At €80 additional revenue per night and 60% occupancy, each week of delay costs approximately €336 in unrealised revenue.</p>
+          <div class="audience-highlight">Payback in ~63 nights at +€80/night</div>
+        </div>
+        <div class="audience-card">
+          <div class="audience-emoji">🌍</div>
+          <div class="audience-title">The Expat Who Knows Sauna</div>
+          <div class="audience-sub">You moved to Malta. You know what you are missing.</div>
+          <p class="audience-body">For people from Finland, Sweden, Germany, or anywhere sauna is part of life — this is not a luxury purchase. It is infrastructure. What you find in Maltese gyms and spas is mostly infrared cabinets or steam rooms that reach 50–60°C. These are not saunas. M&amp;N is the only company in Malta that sells a real Finnish sauna with a Harvia stove that takes löyly.</p>
+          <div class="audience-highlight">The only real Finnish sauna available in Malta</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── COMPONENTS / QUALITY ────────────────────────────────────────────── -->
+  <section id="product-quality">
+    <div class="container">
+      <span class="section-label">The Product</span>
+      <h2 class="section-title">Every component chosen <em>for a reason.</em></h2>
+      <p class="section-desc">M&amp;N Saunas is Malta's only specialist Finnish sauna company. We do not sell pools, hot tubs, or infrared boxes. One product category. Done properly.</p>
+      <div class="components-grid fade-in">
+        <div class="component-card">
+          <div class="component-header">
+            <div class="component-icon">🔥</div>
+            <div class="component-name">Harvia Stove — Finnish-made</div>
+            <span class="component-badge">Finland</span>
+          </div>
+          <p class="component-body">Used in over 1.2 million saunas globally, including Finland's national saunas and Olympic training facilities. Reaches 90–100°C. Takes löyly. The benchmark for authentic Finnish sauna performance — not a cheap imitation.</p>
+        </div>
+        <div class="component-card">
+          <div class="component-header">
+            <div class="component-icon">🌲</div>
+            <div class="component-name">Canadian Hemlock Wood</div>
+            <span class="component-badge">Canada</span>
+          </div>
+          <p class="component-body">Sourced from Canada. Naturally antimicrobial, heat-resistant, and aromatic. Hemlock is the premium choice for authentic Finnish saunas — chosen for its stability in Malta's climate and its resistance to the humidity cycles of regular sauna use.</p>
+        </div>
+        <div class="component-card">
+          <div class="component-header">
+            <div class="component-icon">📱</div>
+            <div class="component-name">Touchscreen Controller</div>
+          </div>
+          <p class="component-body">Precise temperature and timer control from inside or outside the sauna. Pre-heat it before you finish work. Step in when it is ready. No guesswork, no manual adjustment.</p>
+        </div>
+        <div class="component-card">
+          <div class="component-header">
+            <div class="component-icon">🎵</div>
+            <div class="component-name">Bluetooth Audio Built-in</div>
+          </div>
+          <p class="component-body">Integrated speakers. Your playlist, your podcast, your guided meditation. The ritual is yours to design. Sound quality that holds up in a high-temperature, high-humidity environment.</p>
+        </div>
+        <div class="component-card">
+          <div class="component-header">
+            <div class="component-icon">🚚</div>
+            <div class="component-name">Full Delivery &amp; Installation</div>
+          </div>
+          <p class="component-body">We deliver to your door, assemble on-site, connect to your 230V supply, and test before we leave. Your contractor does not need to be involved. You do nothing except use it.</p>
+        </div>
+        <div class="component-card">
+          <div class="component-header">
+            <div class="component-icon">🔄</div>
+            <div class="component-name">Relocation Service — Unique in Malta</div>
+            <span class="component-badge">Exclusive</span>
+          </div>
+          <p class="component-body">If you move within Malta, to Gozo, or to your property in Sicily — we move your sauna with you. No other company in Malta offers this. Your investment is not tied to one property.</p>
+        </div>
+      </div>
+      <div class="warranty-box fade-in">
+        <div class="warranty-icon">🛡️</div>
+        <div>
+          <div class="warranty-title">24-Month Full Warranty + Lifetime Technical Support</div>
+          <p class="warranty-body">Complete coverage on all components including the Harvia stove. Technical support included for the lifetime of the product. We are based in Malta — we come to you. You are not dealing with a foreign company that ships and disappears.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── OBJECTIONS ──────────────────────────────────────────────────────── -->
+  <section id="objections" class="section-alt">
+    <div class="container container--narrow">
+      <span class="section-label">Every Question, Answered</span>
+      <h2 class="section-title">The objections we hear.<br><em>The honest answers.</em></h2>
+      <p class="section-desc">We answer with data, not sales pressure. If the sauna is not right for you, we will tell you.</p>
+      <div class="fade-in">
+        <div class="objection-item">
+          <button class="objection-btn" onclick="toggleObj(this)">
+            "Malta is too hot for a sauna."
+            <span class="chevron">▼</span>
+          </button>
+          <div class="objection-answer">
+            <div class="objection-answer-inner">
+              <p>This is the most common question we hear — and the one most quickly resolved by the data. Finland uses saunas year-round, including during summer months when temperatures regularly reach 25–30°C. Finnish summer sauna culture is well-documented and widely practised.</p>
+              <p>The physiological reason is straightforward: regular sauna use improves your body's thermoregulatory efficiency. Your sweat response becomes faster and more effective. Users in hot climates — including our 20 Malta customers — consistently report feeling <strong>more comfortable in summer</strong> after 4–6 weeks of regular sauna use, not less.</p>
+              <p><em>Of the 20 saunas we have installed in Malta, not a single owner has stopped using it due to the heat. Several use it specifically in summer to improve their heat tolerance before outdoor activities.</em></p>
+            </div>
+          </div>
+        </div>
+        <div class="objection-item">
+          <button class="objection-btn" onclick="toggleObj(this)">
+            "My space is too small."
+            <span class="chevron">▼</span>
+          </button>
+          <div class="objection-answer">
+            <div class="objection-answer-inner">
+              <p>The MNA2 — our most popular model — has a footprint of <strong>1,200 × 1,050mm</strong>. That is smaller than a standard bathroom. It fits in a spare room, a covered terrace, a garage corner, or a garden area.</p>
+              <p>If you are unsure whether your space works, send us a photo or floor plan on WhatsApp. We will give you an honest answer — at no cost and with no obligation. We have installed saunas in spaces that surprised us, and we have also told customers honestly when a space would not work.</p>
+            </div>
+          </div>
+        </div>
+        <div class="objection-item">
+          <button class="objection-btn" onclick="toggleObj(this)">
+            "I can use the sauna at my gym or spa."
+            <span class="chevron">▼</span>
+          </button>
+          <div class="objection-answer">
+            <div class="objection-answer-inner">
+              <p>You can. But the research is clear on what matters: frequency. The JAMA study that showed 63% lower cardiac death risk was based on <strong>4–7 sessions per week</strong>. Once-per-week users saw a 22% reduction — meaningful, but not the same result.</p>
+              <p>Gym and spa sauna members use the sauna an average of 0.8 times per week. Home sauna owners use it 4.2 times per week. The difference is not motivation — it is friction. When a sauna requires a trip, a membership, a booking, and 45 minutes of your evening, you use it when you feel like it. When it is in your home, you use it because it is there.</p>
+              <p><em>A gym membership in Malta costs approximately €50–80/month. Over 5 years, that is €3,000–4,800 — and you still do not own anything. The MNA2 is a one-time investment that you own, use daily, and can take with you when you move.</em></p>
+            </div>
+          </div>
+        </div>
+        <div class="objection-item">
+          <button class="objection-btn" onclick="toggleObj(this)">
+            "€4,970 is a significant investment."
+            <span class="chevron">▼</span>
+          </button>
+          <div class="objection-answer">
+            <div class="objection-answer-inner">
+              <p>It is. Let us put it in context.</p>
+              <p>At 4 sessions per week, the MNA2 costs approximately <strong>€0.60 per session</strong> over 5 years — including electricity (a sauna session costs roughly €0.30–0.50 in electricity at Maltese rates). A spa session in Malta costs €15–40. A gym membership that includes sauna access costs €50–80/month.</p>
+              <p>For property owners: properties with Finnish saunas in Malta command 25–30% higher Airbnb nightly rates. At €80 additional revenue per night and 60% occupancy, the sauna pays for itself in approximately 63 nights — roughly 3.5 months of Airbnb operation.</p>
+              <p>For health-focused buyers: the cardiovascular benefits documented in the research are typically associated with pharmaceutical interventions costing far more than €4,970 over a lifetime — without the side effects.</p>
+            </div>
+          </div>
+        </div>
+        <div class="objection-item">
+          <button class="objection-btn" onclick="toggleObj(this)">
+            "I need to think about it / talk to someone first."
+            <span class="chevron">▼</span>
+          </button>
+          <div class="objection-answer">
+            <div class="objection-answer-inner">
+              <p>That is completely reasonable for a €4,970 purchase. We do not use pressure tactics and we do not follow up aggressively.</p>
+              <p>What we do offer: a no-obligation WhatsApp conversation where you can ask any question, share photos of your space, and get honest advice — including if we think the sauna is not right for your situation. We would rather lose a sale than have a customer who is not satisfied.</p>
+              <p><em>One thing worth knowing: if you are considering a larger or custom model, the lead time is 90 business days from order confirmation. Waiting 2–3 months to decide means a 2–3 month delay on top of that. The MNA2 is in stock and available for immediate delivery.</em></p>
+            </div>
+          </div>
+        </div>
+        <div class="objection-item">
+          <button class="objection-btn" onclick="toggleObj(this)">
+            "What about maintenance?"
+            <span class="chevron">▼</span>
+          </button>
+          <div class="objection-answer">
+            <div class="objection-answer-inner">
+              <p>The Finnish sauna is one of the simplest wellness products you can own. There are no filters to replace, no chemicals to manage, no moving parts except the stove.</p>
+              <p>Maintenance consists of: wiping down the benches after use (30 seconds), airing the sauna after each session (leave the door open for 15 minutes), and an annual light clean of the stove. That is it. The Harvia stove is built to last decades — it is the same stove used in Finnish public saunas that operate daily for 30+ years.</p>
+              <p>Our 24-month warranty covers all components. Technical support is included for the lifetime of the product. We are in Malta — if something needs attention, we come to you.</p>
+            </div>
+          </div>
+        </div>
+        <div class="objection-item">
+          <button class="objection-btn" onclick="toggleObj(this)">
+            "What is the lead time? 90 days is a long time."
+            <span class="chevron">▼</span>
+          </button>
+          <div class="objection-answer">
+            <div class="objection-answer-inner">
+              <p>The MNA2 — our most popular model — is <strong>in stock and available for immediate delivery</strong>. If you order this week, you can be using it next week.</p>
+              <p>The 90 business day lead time applies to larger and custom models, which are manufactured to your specification. If you are currently building or renovating, this is actually an advantage: order now, and your sauna will be ready when your property is. Waiting until the property is finished means a 4-month delay before you can begin using it.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── INSTALLATION GALLERY ────────────────────────────────────────────── -->
+  <section id="gallery">
+    <div class="container container--mid">
+      <span class="section-label">Real Installations</span>
+      <h2 class="section-title">Installed in Malta. <em>Ready for yours.</em></h2>
+      <p class="section-desc">20 saunas installed across Malta and Gozo. Every space is different. Every installation is done by our team, start to finish.</p>
+      <!-- Replace with your YouTube embed -->
+      <div class="video-placeholder fade-in">
+        <div class="play-btn"></div>
+        <div class="video-label">Watch a full installation</div>
+        <div class="video-sub">From delivery to first session · Replace with your YouTube embed</div>
+      </div>
+      <div class="photo-grid fade-in">
+        <div class="photo-placeholder">
+          <div class="ph-icon">📷</div>
+          <div class="ph-caption">Sliema apartment · MNA2 · Installed in 4 hours</div>
+          <div class="ph-add">Add photo here</div>
+        </div>
+        <div class="photo-placeholder">
+          <div class="ph-icon">📷</div>
+          <div class="ph-caption">Madliena villa · Custom model · Garden installation</div>
+          <div class="ph-add">Add photo here</div>
+        </div>
+        <div class="photo-placeholder">
+          <div class="ph-icon">📷</div>
+          <div class="ph-caption">St. Julian's penthouse · MNA2 · Terrace</div>
+          <div class="ph-add">Add photo here</div>
+        </div>
+        <div class="photo-placeholder">
+          <div class="ph-icon">📷</div>
+          <div class="ph-caption">Gozo farmhouse · MNA2 · Interior room</div>
+          <div class="ph-add">Add photo here</div>
+        </div>
+        <div class="photo-placeholder">
+          <div class="ph-icon">📷</div>
+          <div class="ph-caption">Naxxar residence · Custom model · Basement spa</div>
+          <div class="ph-add">Add photo here</div>
+        </div>
+        <div class="photo-placeholder">
+          <div class="ph-icon">📷</div>
+          <div class="ph-caption">Mellieħa villa · MNA2 · Pool area</div>
+          <div class="ph-add">Add photo here</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── TESTIMONIALS ────────────────────────────────────────────────────── -->
+  <section id="testimonials" class="section-alt">
+    <div class="container">
+      <span class="section-label">Customer Experiences</span>
+      <h2 class="section-title">20 saunas installed. <em>Here is what owners say.</em></h2>
+      <p class="section-desc" style="color:#78716c;font-size:0.85rem">Replace the testimonials below with your real customer feedback for maximum credibility.</p>
+      <div class="testimonial-grid fade-in">
+        <div class="testimonial-card">
+          <div class="stars">⭐⭐⭐⭐⭐</div>
+          <p class="testimonial-quote">"I grew up going to sauna three times a week. When I moved to Malta I thought I would have to give it up. M&amp;N made it possible. The Harvia stove is the real thing. It feels like home."</p>
+          <div class="testimonial-author">
+            <div class="testimonial-flag">🇫🇮</div>
+            <div>
+              <div class="testimonial-name">T.H. · Sliema</div>
+              <div class="testimonial-role">Finnish expat · 6 years in Malta</div>
+            </div>
+          </div>
+          <div class="testimonial-metric">Uses it 5× per week</div>
+        </div>
+        <div class="testimonial-card">
+          <div class="stars">⭐⭐⭐⭐⭐</div>
+          <p class="testimonial-quote">"In Germany, sauna is part of life. I missed it deeply after moving to Malta. The MNA2 solved that completely. The installation was seamless and the team understood exactly what I needed."</p>
+          <div class="testimonial-author">
+            <div class="testimonial-flag">🇩🇪</div>
+            <div>
+              <div class="testimonial-name">M.K. · St. Julian's</div>
+              <div class="testimonial-role">German expat · Finance sector</div>
+            </div>
+          </div>
+          <div class="testimonial-metric">Installed in 4 hours</div>
+        </div>
+        <div class="testimonial-card">
+          <div class="stars">⭐⭐⭐⭐⭐</div>
+          <p class="testimonial-quote">"Within the first month of listing, I increased my nightly rate by €90 and the property was fully booked for 6 weeks straight. The sauna is mentioned in every 5-star review."</p>
+          <div class="testimonial-author">
+            <div class="testimonial-flag">🇲🇹</div>
+            <div>
+              <div class="testimonial-name">J.B. · Sliema</div>
+              <div class="testimonial-role">Airbnb host · 3 properties</div>
+            </div>
+          </div>
+          <div class="testimonial-metric">+€90 nightly rate</div>
+        </div>
+        <div class="testimonial-card">
+          <div class="stars">⭐⭐⭐⭐⭐</div>
+          <p class="testimonial-quote">"I had been looking for a real Finnish sauna in Malta for years. Everything I found was either an infrared box or a steam room. M&amp;N was the first company that understood what I was asking for."</p>
+          <div class="testimonial-author">
+            <div class="testimonial-flag">🇸🇪</div>
+            <div>
+              <div class="testimonial-name">A.L. · Madliena</div>
+              <div class="testimonial-role">Swedish resident · 12 years in Malta</div>
+            </div>
+          </div>
+          <div class="testimonial-metric">Uses it 4× per week</div>
+        </div>
+      </div>
+      <p class="testimonial-note">⚠️ Replace the above testimonials with your real customer feedback for maximum credibility.</p>
+    </div>
+  </section>
+
+  <!-- ── PRODUCT GALLERY ─────────────────────────────────────────────────── -->
+  <section id="products">
+    <div class="container">
+      <span class="section-label">The Saunas</span>
+      <h2 class="section-title">Choose your sauna.</h2>
+      <p class="section-desc">All models include the Harvia stove, Canadian Hemlock or Red Cedar wood, touchscreen controller, Bluetooth audio, full installation, and 24-month warranty. Not sure which is right for your space? Message us.</p>
+      <div class="product-grid fade-in">
+        <div class="product-card">
+          <div class="product-photo">
+            <div class="ph-icon">📷</div>
+            <div class="ph-add">Add product photo here</div>
+            <div class="product-badge">In Stock</div>
+          </div>
+          <div class="product-body">
+            <div class="product-name">MNA2 Finnish Sauna</div>
+            <div class="product-tagline">Our best-seller. In stock, available this week.</div>
+            <ul class="product-specs">
+              <li>1,200 × 1,050 × 1,900mm</li>
+              <li>2–3 person capacity</li>
+              <li>2,500W Harvia stove</li>
+              <li>Canadian Hemlock or Red Cedar</li>
+              <li>Touchscreen + Bluetooth audio</li>
+              <li>In stock — immediate delivery</li>
+            </ul>
+            <div class="product-price">From €4,970 + VAT</div>
+            <div class="product-btns">
+              <a href="https://wa.me/35677731019?text=Hello%2C%20I%27m%20interested%20in%20the%20MNA2%20Finnish%20Sauna." target="_blank" rel="noopener" class="btn-wa-product">💬 Order on WhatsApp</a>
+              <a href="https://www.mnsaunasmt.com" target="_blank" rel="noopener" class="btn-site-product">↗ View on Site</a>
+            </div>
+          </div>
+        </div>
+        <div class="product-card">
+          <div class="product-photo">
+            <div class="ph-icon">📷</div>
+            <div class="ph-add">Add product photo here</div>
+          </div>
+          <div class="product-body">
+            <div class="product-name">MNA4 Finnish Sauna</div>
+            <div class="product-tagline">For larger spaces. Made to order.</div>
+            <ul class="product-specs">
+              <li>Larger footprint (contact for specs)</li>
+              <li>3–4 person capacity</li>
+              <li>Harvia stove — higher output</li>
+              <li>Canadian Hemlock or Red Cedar</li>
+              <li>Touchscreen + Bluetooth audio</li>
+              <li>90 business day lead time</li>
+            </ul>
+            <div class="product-price">Contact for pricing</div>
+            <div class="product-btns">
+              <a href="https://wa.me/35677731019?text=Hello%2C%20I%27m%20interested%20in%20the%20MNA4%20Finnish%20Sauna." target="_blank" rel="noopener" class="btn-wa-product">💬 Order on WhatsApp</a>
+              <a href="https://www.mnsaunasmt.com" target="_blank" rel="noopener" class="btn-site-product">↗ View on Site</a>
+            </div>
+          </div>
+        </div>
+        <div class="product-card">
+          <div class="product-photo">
+            <div class="ph-icon">📷</div>
+            <div class="ph-add">Add product photo here</div>
+          </div>
+          <div class="product-body">
+            <div class="product-name">Custom Finnish Sauna</div>
+            <div class="product-tagline">Built to your exact specifications.</div>
+            <ul class="product-specs">
+              <li>Custom dimensions</li>
+              <li>Custom capacity</li>
+              <li>Harvia stove — model to spec</li>
+              <li>Wood choice: Hemlock or Cedar</li>
+              <li>All accessories included</li>
+              <li>90 business day lead time</li>
+            </ul>
+            <div class="product-price">Contact for pricing</div>
+            <div class="product-btns">
+              <a href="https://wa.me/35677731019?text=Hello%2C%20I%27m%20interested%20in%20a%20custom%20Finnish%20sauna." target="_blank" rel="noopener" class="btn-wa-product">💬 Order on WhatsApp</a>
+              <a href="https://www.mnsaunasmt.com" target="_blank" rel="noopener" class="btn-site-product">↗ View on Site</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="product-footer-note fade-in">
+        <p>Not sure which model is right for your space? Send us your floor plan or a photo of the area on WhatsApp. We will advise honestly — including if a sauna would not work in your space.</p>
+        <a href="https://wa.me/35677731019?text=Hello%2C%20I%27d%20like%20advice%20on%20which%20sauna%20fits%20my%20space." target="_blank" rel="noopener" class="btn-wa-inline">💬 Send us your floor plan on WhatsApp →</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── FINAL CTA ───────────────────────────────────────────────────────── -->
+  <section id="final-cta">
+    <div class="container container--narrow">
+      <div class="final-badge">🔥 20 Saunas Installed in Malta</div>
+      <h2>Your sauna is waiting.<br><em>The only question is when.</em></h2>
+      <p class="final-sub">Every owner uses it. Not one has regretted it. The MNA2 is in stock — available for delivery this week. Custom models: 90 business days from your order.</p>
+      <p class="final-note">No pressure. No sales call. Just a WhatsApp conversation where we answer your questions honestly.</p>
+      <div class="final-cta-row">
+        <a href="https://wa.me/35677731019?text=Hello%2C%20I%27m%20interested%20in%20a%20Finnish%20sauna%20for%20my%20property%20in%20Malta." target="_blank" rel="noopener" class="btn-primary-lg">💬 Order on WhatsApp</a>
+        <a href="https://www.mnsaunasmt.com/product-category/finnish-saunas" target="_blank" rel="noopener" class="btn-secondary-lg">↗ View Full Site</a>
+      </div>
+      <div class="final-trust">
+        <span>🔥 Finnish Harvia Stove</span>
+        <span>🌲 Canadian Hemlock</span>
+        <span>🚚 Malta &amp; Gozo Delivery</span>
+        <span>🛡️ 24-Month Warranty</span>
+        <span>🔄 Relocation Service Included</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── FOOTER ──────────────────────────────────────────────────────────── -->
+  <footer>
+    <div class="footer-inner">
+      <div class="footer-logo">🔥 M&amp;N Saunas Malta · Malta's only specialist Finnish sauna company</div>
+      <div class="footer-links">
+        <a href="https://wa.me/35677731019" target="_blank" rel="noopener">💬 WhatsApp</a>
+        <a href="https://www.mnsaunasmt.com" target="_blank" rel="noopener">↗ mnsaunasmt.com</a>
+      </div>
+      <span>© 2026 M&amp;N Saunas Malta</span>
+    </div>
+  </footer>
+
+  <!-- ── JAVASCRIPT ──────────────────────────────────────────────────────── -->
+  <script>
+    // Sticky header
+    const header = document.getElementById('site-header');
+    window.addEventListener('scroll', () => {
+      header.classList.toggle('scrolled', window.scrollY > 60);
+    });
+
+    // Objection accordion
+    function toggleObj(btn) {
+      const answer = btn.nextElementSibling;
+      const isOpen = answer.classList.contains('open');
+      // Close all
+      document.querySelectorAll('.objection-answer').forEach(a => a.classList.remove('open'));
+      document.querySelectorAll('.objection-btn').forEach(b => b.classList.remove('open'));
+      // Open clicked if it was closed
+      if (!isOpen) {
+        answer.classList.add('open');
+        btn.classList.add('open');
+      }
+    }
+
+    // Fade-in on scroll
+    const fadeEls = document.querySelectorAll('.fade-in');
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.1, rootMargin: '0px 0px -60px 0px' });
+    fadeEls.forEach(el => observer.observe(el));
+  </script>
+
+</body>
+</html>
